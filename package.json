@@ -1,0 +1,19 @@
+{
+  "name": "eclipse-amazon-music",
+  "version": "1.0.0",
+  "description": "Eclipse addon backend proxying the AmineSoukara amazon-music API via Cloudflare Workers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "secret:token": "wrangler secret put AMAZON_AUTH_TOKEN"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
