@@ -1,0 +1,19 @@
+name = "eclipse-amazon-music"
+main = "src/index.js"
+compatibility_date = "2026-07-18"
+compatibility_flags = ["nodejs_compat"]
+
+# Set these via `wrangler secret put AMAZON_AUTH_TOKEN`
+# and either a var below or as a secret if you prefer to keep it private
+[vars]
+AMAZON_API_BASE = "https://REPLACE-WITH-BASE-URL-FROM-README"
+
+# Optional: KV namespace for caching search/track/album lookups
+# Create with: wrangler kv:namespace create "CACHE"
+# Then paste the returned id below
+[[kv_namespaces]]
+binding = "CACHE"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[observability]
+enabled = true
